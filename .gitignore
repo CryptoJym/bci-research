@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data files
+*.h5
+*.hdf5
+*.mat
+*.edf
+*.bdf
+*.fif
+*.raw.fif
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output
+tokens_output.json
+*.log
+*.csv
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Temporary files
+*.tmp
+*.temp
+*.cache

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain-Computer Interface Research - James Brady</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">BCI Research Hub</div>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#tokenization">Tokenization</a></li>
+                <li><a href="#implementation">Implementation</a></li>
+                <li><a href="#equations">Equations</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Brain-Computer Interface Research</h1>
+            <p class="hero-subtitle">Converting Neural Activity to Computational Tokens</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">8192</span>
+                    <span class="stat-label">Token Vocabulary</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">500Hz</span>
+                    <span class="stat-label">Sampling Rate</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">88%</span>
+                    <span class="stat-label">P300 Reliability</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="overview" class="section">
+            <h2>Research Overview</h2>
+            <div class="card">
+                <h3>Brain-to-LLM Tokenization Framework</h3>
+                <p>This research presents a comprehensive mathematical framework for converting brain activity (EEG + biometric data) into discrete tokens that can be processed by language models. The system combines multiple approaches:</p>
+                <ul>
+                    <li><strong>Chaos Theory</strong> - Analyzing neural dynamics as self-organizing systems</li>
+                    <li><strong>Holonomic Brain Theory</strong> - Using Gabor transforms for distributed information extraction</li>
+                    <li><strong>Global Neuronal Workspace</strong> - Detecting consciousness markers like P300 and gamma synchronization</li>
+                    <li><strong>Integrated Information Theory</strong> - Measuring consciousness through information integration</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="tokenization" class="section">
+            <h2>Tokenization Methods</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Discrete Wavelet Transform</h3>
+                    <p>Decompose EEG into frequency bands (delta, theta, alpha, beta, gamma) and quantize into discrete tokens.</p>
+                    <pre><code class="python">delta = pywt.wavedec(signal, 'db4', level=7)[0]  # 0.5-4 Hz
+theta = pywt.wavedec(signal, 'db4', level=6)[0]  # 4-8 Hz
+alpha = pywt.wavedec(signal, 'db4', level=5)[0]  # 8-13 Hz</code></pre>
+                </div>
+                <div class="card">
+                    <h3>Microstate Analysis</h3>
+                    <p>EEG shows quasi-stable states lasting 80-120ms. Each microstate represents a "neural token" forming "neural sentences".</p>
+                    <ul>
+                        <li>4-7 canonical microstates (A-G)</li>
+                        <li>Transition matrices encode syntax</li>
+                        <li>Complexity measurable via entropy</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Phase Space Reconstruction</h3>
+                    <p>Use Takens' embedding theorem to reconstruct attractor dynamics from time series data.</p>
+                    <pre><code class="python">X(t) = [x(t), x(t+τ), x(t+2τ), ..., x(t+(m-1)τ)]</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="implementation" class="section">
+            <h2>Implementation Architecture</h2>
+            <div class="pipeline">
+                <div class="pipeline-step">
+                    <h4>1. Signal Acquisition</h4>
+                    <p>EEG (64+ channels, 256Hz) + WHOOP biometrics</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <h4>2. Preprocessing</h4>
+                    <p>Minimal filtering (0.5Hz high-pass)</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <h4>3. Feature Extraction</h4>
+                    <p>P300, Alpha power, HRV, Gamma sync</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <h4>4. Holonomic Transform</h4>
+                    <p>Gabor wavelets for distributed info</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-step">
+                    <h4>5. VQ-VAE Tokenization</h4>
+                    <p>8192 token vocabulary</p>
+                </div>
+            </div>
+
+            <div class="card implementation-details">
+                <h3>Key Components</h3>
+                <div class="grid">
+                    <div>
+                        <h4>Most Reliable Features</h4>
+                        <ol>
+                            <li>P300 amplitude (r = 0.88)</li>
+                            <li>Alpha power (r = 0.89)</li>
+                            <li>HRV from WHOOP (r = 0.85-0.88)</li>
+                            <li>Beta ERD (r = 0.89)</li>
+                            <li>Gamma synchrony (r = 0.82)</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h4>Hardware Requirements</h4>
+                        <ul>
+                            <li>EEG: 64-channel, 256Hz minimum</li>
+                            <li>Biometrics: WHOOP band or similar</li>
+                            <li>GPU: 8GB+ VRAM for VQ-VAE</li>
+                            <li>Storage: ~100GB for data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="equations" class="section">
+            <h2>Key Mathematical Equations</h2>
+            <div class="equations-grid">
+                <div class="equation-card">
+                    <h4>Master Equation</h4>
+                    <div class="equation">Token_t = H[S_t · PE_t · Φ_t · GA_t]</div>
+                    <p>Where H is holonomic transform, S is somatic marker, PE is prediction error, Φ is integrated information, GA is global access</p>
+                </div>
+                <div class="equation-card">
+                    <h4>Lyapunov Exponent</h4>
+                    <div class="equation">λ = lim(t→∞) (1/t) ln(|δx(t)|/|δx(0)|)</div>
+                    <p>Positive λ indicates chaotic dynamics</p>
+                </div>
+                <div class="equation-card">
+                    <h4>Phase Locking Value</h4>
+                    <div class="equation">PLV = |⟨e^(iΔφ(t))⟩|</div>
+                    <p>Measures phase synchronization between signals</p>
+                </div>
+                <div class="equation-card">
+                    <h4>Integrated Information (IIT 3.0)</h4>
+                    <div class="equation">Φ_t = min_{P∈Partitions} EMD(C(S), ∏ᵢ C(Mᵢ))</div>
+                    <p>Earth Mover's Distance between whole and parts</p>
+                </div>
+                <div class="equation-card">
+                    <h4>Gabor Transform</h4>
+                    <div class="equation">G(t,f) = ∫ x(τ)g(τ-t)e^(-2πifτ)dτ</div>
+                    <p>Time-frequency representation for holonomic analysis</p>
+                </div>
+                <div class="equation-card">
+                    <h4>Sample Entropy</h4>
+                    <div class="equation">SampEn = -ln(A/B)</div>
+                    <p>Measures signal complexity and predictability</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="code" class="section">
+            <h2>Implementation Code</h2>
+            <div class="code-tabs">
+                <button class="tab-button active" onclick="showTab('chaos')">Chaos Analysis</button>
+                <button class="tab-button" onclick="showTab('holonomic')">Holonomic Transform</button>
+                <button class="tab-button" onclick="showTab('consciousness')">Consciousness Markers</button>
+                <button class="tab-button" onclick="showTab('tokenizer')">Tokenizer</button>
+            </div>
+
+            <div id="chaos" class="tab-content active">
+                <pre><code class="python">def phase_space_reconstruction(eeg_signal, embedding_dim=3, tau=10):
+    """Takens' embedding theorem for attractor reconstruction"""
+    N = len(eeg_signal)
+    M = N - (embedding_dim - 1) * tau
+    phase_space = np.zeros((M, embedding_dim))
+    
+    for i in range(M):
+        for j in range(embedding_dim):
+            phase_space[i, j] = eeg_signal[i + j * tau]
+    
+    return phase_space
+
+def calculate_lyapunov(phase_space, dt=0.002):
+    """Calculate largest Lyapunov exponent"""
+    divergence_rates = []
+    for i in range(len(phase_space) - 1):
+        distances = np.linalg.norm(phase_space - phase_space[i], axis=1)
+        distances[i] = np.inf
+        nearest_idx = np.argmin(distances)
+        
+        initial_sep = distances[nearest_idx]
+        if i < len(phase_space) - 10 and nearest_idx < len(phase_space) - 10:
+            final_sep = np.linalg.norm(phase_space[i+10] - phase_space[nearest_idx+10])
+            if initial_sep > 0:
+                divergence_rates.append(np.log(final_sep/initial_sep) / (10*dt))
+    
+    return np.mean(divergence_rates) if divergence_rates else 0</code></pre>
+            </div>
+
+            <div id="holonomic" class="tab-content">
+                <pre><code class="python">def gabor_transform(eeg_signal, window_size=128, overlap=0.75):
+    """Holonomic theory uses Gabor functions"""
+    from scipy import signal
+    
+    frequencies = np.arange(1, 60, 1)  # 1-60 Hz
+    gabor_matrix = []
+    hop = int(window_size * (1 - overlap))
+    
+    for freq in frequencies:
+        t = np.linspace(-window_size//2, window_size//2, window_size)
+        sigma = window_size / (2 * np.pi * freq)
+        gabor_kernel = np.exp(-t**2 / (2*sigma**2)) * np.exp(2j * np.pi * freq * t / 500)
+        
+        gabor_response = signal.convolve(eeg_signal, gabor_kernel, mode='same')
+        gabor_matrix.append(np.abs(gabor_response[::hop]))
+    
+    return np.array(gabor_matrix), frequencies
+
+def extract_holographic_features(gabor_matrix):
+    """Extract interference patterns encoding distributed information"""
+    phase_matrix = np.angle(gabor_matrix)
+    n_freqs = phase_matrix.shape[0]
+    coupling_matrix = np.zeros((n_freqs, n_freqs))
+    
+    for i in range(n_freqs):
+        for j in range(i+1, n_freqs):
+            phase_diff = phase_matrix[i] - phase_matrix[j]
+            coupling_matrix[i, j] = np.abs(np.mean(np.exp(1j * phase_diff)))
+    
+    return {
+        'phase_coherence': coupling_matrix,
+        'information_density': -np.sum(coupling_matrix * np.log(coupling_matrix + 1e-10))
+    }</code></pre>
+            </div>
+
+            <div id="consciousness" class="tab-content">
+                <pre><code class="python">def detect_p300_events(eeg_signal, baseline_window=100):
+    """P300: 250-500ms post-stimulus, marker of conscious access"""
+    from scipy.signal import butter, filtfilt
+    
+    b, a = butter(4, [0.1, 30], btype='band', fs=500)
+    filtered = filtfilt(b, a, eeg_signal)
+    
+    p300_candidates = []
+    window_samples = int(0.5 * 500)  # 500ms window
+    
+    for i in range(baseline_window, len(filtered) - window_samples):
+        baseline = np.mean(filtered[i-baseline_window:i])
+        window = filtered[i:i+window_samples]
+        
+        peak_time = np.argmax(window)
+        if 125 < peak_time < 250:  # 250-500ms range
+            peak_amplitude = window[peak_time]
+            if peak_amplitude > baseline + 2*np.std(filtered):
+                p300_candidates.append({
+                    'time': i + peak_time,
+                    'amplitude': peak_amplitude,
+                    'latency': peak_time * 2
+                })
+    
+    return p300_candidates
+
+def analyze_gamma_synchrony(multi_channel_eeg, freq_range=(40, 80)):
+    """Gamma synchronization indicates conscious binding"""
+    from scipy.signal import hilbert, butter, filtfilt
+    
+    b, a = butter(4, freq_range, btype='band', fs=500)
+    n_channels = multi_channel_eeg.shape[0]
+    plv_matrix = np.zeros((n_channels, n_channels))
+    
+    for i in range(n_channels):
+        for j in range(i+1, n_channels):
+            sig1_filt = filtfilt(b, a, multi_channel_eeg[i])
+            sig2_filt = filtfilt(b, a, multi_channel_eeg[j])
+            
+            phase1 = np.angle(hilbert(sig1_filt))
+            phase2 = np.angle(hilbert(sig2_filt))
+            
+            phase_diff = phase1 - phase2
+            plv_matrix[i, j] = np.abs(np.mean(np.exp(1j * phase_diff)))
+    
+    global_synchrony = np.mean(plv_matrix[plv_matrix > 0])
+    
+    return {
+        'plv_matrix': plv_matrix,
+        'global_synchrony': global_synchrony,
+        'is_conscious_state': global_synchrony > 0.3
+    }</code></pre>
+            </div>
+
+            <div id="tokenizer" class="tab-content">
+                <pre><code class="python">class ConsciousnessTokenizer:
+    def __init__(self, sampling_rate=500):
+        self.fs = sampling_rate
+        self.window_size = int(0.3 * self.fs)  # 300ms windows
+        
+    def generate_token(self, eeg_window):
+        """Combine all approaches into unified consciousness token"""
+        token = {}
+        
+        # Chaos theory features
+        phase_space = phase_space_reconstruction(eeg_window)
+        token['lyapunov'] = calculate_lyapunov(phase_space)
+        token['attractor_type'] = detect_attractors(phase_space)
+        
+        # Holonomic features
+        gabor_matrix, _ = gabor_transform(eeg_window)
+        holo_features = extract_holographic_features(gabor_matrix)
+        token['phase_coherence'] = holo_features['phase_coherence']
+        token['information_density'] = holo_features['information_density']
+        
+        # Dehaene markers
+        p300_events = detect_p300_events(eeg_window)
+        token['has_p300'] = len(p300_events) > 0
+        token['p300_latency'] = p300_events[0]['latency'] if p300_events else None
+        
+        # Additional complexity measures
+        token['sample_entropy'] = self.sample_entropy(eeg_window)
+        token['hurst_exponent'] = self.hurst_exponent(eeg_window)
+        
+        # Spectral profile for linguistic correlation
+        token['spectral_profile'] = self.extract_spectral_profile(eeg_window)
+        
+        return token</code></pre>
+            </div>
+        </section>
+
+        <section id="resources" class="section">
+            <h2>Resources & Documentation</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Research Papers</h3>
+                    <ul>
+                        <li>Brain2Text (Makin et al., 2020) - Neural to text decoding</li>
+                        <li>BERT for EEG (Kostas et al., 2021) - Language models for brain signals</li>
+                        <li>Motor Imagery Tokens (Willett et al., 2021) - Handwriting BCIs</li>
+                        <li>Semantic Thought Tokens (Moses et al., 2021) - Thought decoding</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Hardware Support</h3>
+                    <ul>
+                        <li>Neurable MW75 - 12 channels, 500Hz, around-ear placement</li>
+                        <li>OpenBCI - Open source EEG hardware</li>
+                        <li>WHOOP Band - Biometric data integration</li>
+                        <li>Standard EEG systems - 64+ channels recommended</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Software Stack</h3>
+                    <ul>
+                        <li>Python 3.8+ with NumPy, SciPy, MNE</li>
+                        <li>PyTorch for VQ-VAE implementation</li>
+                        <li>BrainFlow for hardware interfacing</li>
+                        <li>Real-time processing with asyncio</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 James Brady - BCI Research. Open source under MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
